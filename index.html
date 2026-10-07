@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content="At a glance discovery of the skills, projects and experience of MidnightWitcher: Well-rounded Tech Consultant, PMP and Software Developer." />
+
+    <title>MidnightWitcher - Portfolio</title>
+    <link rel="stylesheet" href="./style.css"/>
+  </head>
+  <body>
+    <header>
+      <h1>MidnightWitcher</h1>
+      <input class="visually-hidden menu-toggle" type="checkbox" id="menu-toggle" aria-label="Toggle navigation menu" />
+      <label class="menu-button" for="menu-toggle" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      <nav>
+        <ul>
+          <li><a href="#aboutme">About Me</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="aboutme">
+        <h2>About Me</h2>
+        <p>Once a sith Lord... Now a Full Stack Software developer.</p>
+      </section>
+
+      <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>Responsive web design</li>
+          <li>Web accessibility</li>
+          <li>Git and version control</li>
+          <li>React</li>
+          <li>REST APIs</li>
+          <li>SQL databases</li>
+          <li>Testing and debugging</li>
+        </ul>
+      </section>
+
+      <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-filters" aria-label="Filter projects by category">
+          <button class="filter-button is-active" type="button" data-category="all" aria-pressed="true">All</button>
+          <button class="filter-button" type="button" data-category="web" aria-pressed="false">Web</button>
+          <button class="filter-button" type="button" data-category="design" aria-pressed="false">Design</button>
+          <button class="filter-button" type="button" data-category="development" aria-pressed="false">Development</button>
+        </div>
+        <article class="project-card" data-category="web">
+          <h3>Project One</h3>
+          <figure>
+            <button class="project-image-button" type="button" data-image-src="project1.jpg" data-image-alt="Screenshot of Project One">
+              <img src="project1.jpg" alt="Screenshot of Project One" />
+            </button>
+            <figcaption>Project One description placeholder.</figcaption>
+          </figure>
+        </article>
+        <article class="project-card" data-category="development">
+          <h3>Project Two</h3>
+          <figure>
+            <button class="project-image-button" type="button" data-image-src="project2.jpg" data-image-alt="Screenshot of Project Two">
+              <img src="project2.jpg" alt="Screenshot of Project Two" />
+            </button>
+            <figcaption>Project Two description placeholder.</figcaption>
+          </figure>
+        </article>
+        <article class="project-card" data-category="design">
+          <h3>Project Three</h3>
+          <figure>
+            <button class="project-image-button" type="button" data-image-src="project3.jpg" data-image-alt="Screenshot of Project Three">
+              <img src="project3.jpg" alt="Screenshot of Project Three" />
+            </button>
+            <figcaption>Project Three description placeholder.</figcaption>
+          </figure>
+        </article>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2><!-- To be determined: <form id="contact-form" data-api-endpoint="/api/contact"> -->
+        <form id="contact-form" action="#" method="post" novalidate>
+          <div>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" autocomplete="name" required aria-describedby="name-error" />
+            <p class="field-error" id="name-error" aria-live="polite"></p>
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" required aria-describedby="email-error" />
+            <p class="field-error" id="email-error" aria-live="polite"></p>
+          </div>
+          <div>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required aria-describedby="message-error"></textarea>
+            <p class="field-error" id="message-error" aria-live="polite"></p>
+          </div>
+          <button type="submit">Send message</button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 MidnightWitcher</p>
+    </footer>
+
+    <div class="lightbox" id="project-lightbox" role="dialog" aria-modal="true" aria-label="Project image preview" hidden>
+      <button class="lightbox-close" type="button" aria-label="Close image preview">&times;</button>
+      <figure class="lightbox-content">
+        <img id="lightbox-image" src="" alt="" />
+        <figcaption id="lightbox-caption"></figcaption>
+      </figure>
+    </div>
+  <script src="script.js"></script>
+  </body>
+</html>
